@@ -90,11 +90,11 @@ pip install -r requirements.txt
 
   
 
-<p>4.Modify the contents of the /data/predefined_classes.txt file in the directory to your own category</p>
+<p>10.Modify the contents of the /data/predefined_classes.txt file in the directory to your own category</p>
 
   
 
-<p>10.Launching applications</p>
+<p>11.Launching applications</p>
 
   
 
@@ -109,10 +109,10 @@ python ActiveLearningLabeler.py
 
   
 
-<p>11. Click on the "Auto Annotate" button to confirm that the information is correct and then select the trained yolov5 pytorch model weights from path/yolov5/runs/ to complete the auto annotation</p>
+<p>12. Click on the "Auto Annotate" button to confirm that the information is correct and then select the trained yolov5 pytorch model weights from path/yolov5/runs/ to complete the auto annotation</p>
 
   
 
-<p>12. Adjust the automatic annotation results according to the actual requirements and save them</p>
-<p>13. Click on Retrain Model to finetune the model on the fixed annotations and obtain a better performance using active learning</p>
-<p>14. Now you can use the fintuned model to annotate other images</p>
+<p>13. Adjust the automatic annotation results according to the actual requirements and save them</p>
+<p>14. Click on Retrain Model to finetune the model on the fixed annotations and obtain a better performance using active learning</p>
+<p>15. Now you can use the fintuned model to annotate other images</p>
