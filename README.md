@@ -1,52 +1,118 @@
-<h1>labelGo</h1>
-<p>Guide Language:<a href="https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/readme_zh_cn.md">简体中文</a></p>
-<p>A graphical Semi-automatic annotation tool based on <a href="https://github.com/tzutalin/labelImg">labelImg</a> and <a href="https://github.com/ultralytics/yolov5">YOLOv5</a></p>
-<p>Semi-automatic annotation of datasets by existing yolov5 pytorch models</p>
+
+<h1>ActiveLearning Labeler</h1>
+
+
+<p>A graphical Semi-automatic annotation tool based on <a  href="https://github.com/tzutalin/labelImg">labelImg</a> and <a  href="https://github.com/ultralytics/yolov5">YOLOv5</a></p>
+
+<p>Active learning Tool for semi-automatic data annoation for object detection</p>
+
+  
 
 ## Demonstration of semi-automatic labeling function
-![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo1.gif) 
-## Function demonstration of converting Yolo format to VOC format with one click
-![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo2.gif) 
+This tool is used to reduce the time of the labeling for object detection using a pretrained Yolo model.
+All you have to do is train the model on few annotated data, run the tool and ask for autolabel proposals from the models weights, correct what needs to be fixed and fine tune the model on the fixed annotation that way the model will learn from your feedback.
+
+  
 
 ## Attention
+
 <p>If there is a problem, please put it forward in the issue</p>
+
 <p>Please put classes.txt under the marked dataset folder in advance</p>
+
 <p>The annotation file is saved in the same location as the picture folder</p>
+
 <p>Recommended version of python: python 3.8</p>
+
 <p>Recommended for conda environments</p>
-<p>The item is completely free and it is forbidden to sell the item in any way. </p>
+
 <p>Note: This project only supports Version 5 of YOLOv5 for the time being.</p>
 
+  
+  
 
 ## Installation and use
-<p>1.Fetching projects from git</p>
+
+
+
+<p>1.Fetching Yolov5 project</p>
+
+  
 
 ```bash
-git clone https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg.git
-```
 
-<p>2.Switching the operating directory to the project directory</p>
+git clone https://github.com/ultralytics/yolov5
+
+```
+<p>2.Put the annotated data into path/data and put your images and labels, train and test </p>
+<p>3.Create your training configuration in a yamlfile (number of classes, classes names ordered by index, train path...)</p>
+<p>4.train your model using:</p>
+  
 
 ```bash
-cd labelGo-Yolov5AutoLabelImg
+
+python train.py --data yourconfigfile.yaml
+
 ```
+
+<p>5.Fetching ActiveLearningLabeler Project</p>
+
+  
+
+```bash
+
+git clone https://github.com/MoetezKd/ActiveLearningLabeler/
+
+```
+<p>6.Copy all your yolo project to the yolov5 folder of the ActiveLearningLabeler Project</p>
+<p>7. put the images you want to label in the images folder and modify the classes.txt the same as the trained yolov5 order</p>
+<p>5.Switching the operating directory to the project directory</p>
+
+  
+
+```bash
+
+cd ActiveLearningLabeler
+
+```
+
+  
 
 <p>3.Installation environment</p>
 
+  
+
 ```bash
+
 pip install -r requirements.txt
+
 ```
+
+  
 
 <p>4.Modify the contents of the /data/predefined_classes.txt file in the directory to your own category</p>
 
+  
+
 <p>5.Launching applications</p>
 
+  
+
 ```bash
-python labelGo.py
+
+python ActiveLearningLabeler.py
+
 ```
 
-<p>6. Click on the "Open directory" button to select the folder where the images are stored</p>
+  
 
-<p>7. Click on the "Auto Annotate" button to confirm that the information is correct and then select the trained yolov5 pytorch model to complete the auto annotation</p>
+
+  
+
+<p>7. Click on the "Auto Annotate" button to confirm that the information is correct and then select the trained yolov5 pytorch model weights from path/yolov5/runs/ to complete the auto annotation</p>
+
+  
 
 <p>8. Adjust the automatic annotation results according to the actual requirements and save them</p>
+<p>9. Click on Retrain Model to finetune the model on the fixed annotations and obtain a better performance using active learning</p>
+<p>10. Now you can use the fintuned model to annotate other images</p>
