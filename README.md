@@ -66,7 +66,7 @@ git clone https://github.com/MoetezKd/ActiveLearningLabeler/
 ```
 <p>6.Copy all your yolo project to the yolov5 folder of the ActiveLearningLabeler Project</p>
 <p>7. put the images you want to label in the images folder and modify the classes.txt the same as the trained yolov5 order</p>
-<p>5.Switching the operating directory to the project directory</p>
+<p>8.Switching the operating directory to the project directory</p>
 
   
 
@@ -78,7 +78,7 @@ cd ActiveLearningLabeler
 
   
 
-<p>3.Installation environment</p>
+<p>9.Installation environment</p>
 
   
 
@@ -94,7 +94,7 @@ pip install -r requirements.txt
 
   
 
-<p>5.Launching applications</p>
+<p>10.Launching applications</p>
 
   
 
@@ -109,10 +109,10 @@ python ActiveLearningLabeler.py
 
   
 
-<p>7. Click on the "Auto Annotate" button to confirm that the information is correct and then select the trained yolov5 pytorch model weights from path/yolov5/runs/ to complete the auto annotation</p>
+<p>11. Click on the "Auto Annotate" button to confirm that the information is correct and then select the trained yolov5 pytorch model weights from path/yolov5/runs/ to complete the auto annotation</p>
 
   
 
-<p>8. Adjust the automatic annotation results according to the actual requirements and save them</p>
-<p>9. Click on Retrain Model to finetune the model on the fixed annotations and obtain a better performance using active learning</p>
-<p>10. Now you can use the fintuned model to annotate other images</p>
+<p>12. Adjust the automatic annotation results according to the actual requirements and save them</p>
+<p>13. Click on Retrain Model to finetune the model on the fixed annotations and obtain a better performance using active learning</p>
+<p>14. Now you can use the fintuned model to annotate other images</p>
