@@ -1,5 +1,5 @@
 
-<h1>ActiveLearning Labeler</h1>
+<h1>ActiveOD</h1>
 
 
 <p>A graphical Semi-automatic annotation tool based on <a  href="https://github.com/tzutalin/labelImg">labelImg</a> and <a  href="https://github.com/ultralytics/yolov5">YOLOv5</a></p>
@@ -61,7 +61,7 @@ python train.py --data yourconfigfile.yaml
 
 ```bash
 
-git clone https://github.com/MoetezKd/ActiveLearningLabeler/
+git clone https://github.com/MoetezKd/ActiveOD/
 
 ```
 <p>6.Copy all your yolo project to the yolov5 folder of the ActiveLearningLabeler Project</p>
@@ -72,7 +72,7 @@ git clone https://github.com/MoetezKd/ActiveLearningLabeler/
 
 ```bash
 
-cd ActiveLearningLabeler
+cd ActiveOD
 
 ```
 
