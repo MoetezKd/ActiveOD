@@ -100,7 +100,7 @@ pip install -r requirements.txt
 
 ```bash
 
-python ActiveLearningLabeler.py
+python ActiveOD.py
 
 ```
 
